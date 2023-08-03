@@ -3,7 +3,7 @@ function drawsphere(a,b,c,R)
 % 以(a,b,c)为球心，R为半径
 
     % 生成数据
-    [x,y,z] = sphere(35);
+    [x,y,z] = sphere(20);
 
     % 调整半径
     x = R*x; 

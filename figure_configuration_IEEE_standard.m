@@ -41,13 +41,13 @@ set(0,'defaultAxesYGrid','on');
 set(0,'defaultAxesXGrid','on');
 
 set(0,'defaultAxesFontName','Arial');
-set(0,'defaultAxesFontSize',8);
+set(0,'defaultAxesFontSize',6);
 
 set(0,'defaultTextFontName','Arial');
-set(0,'defaultTextFontSize',8);
+set(0,'defaultTextFontSize',6);
 
 set(0,'defaultLegendFontName','Arial');
-set(0,'defaultLegendFontSize',8);
+set(0,'defaultLegendFontSize',6);
 
 set(0,'defaultAxesUnits','normalized');
 set(0,'defaultAxesPosition',[left/width bottom/hight (width-left-right)/width  (hight-bottom-top)/hight]);
