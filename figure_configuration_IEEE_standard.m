@@ -13,15 +13,15 @@
 % Width: column width: 8.8 cm; page width: 18.1 cm.
 
 %% width & hight of the figure
-k_scaling =1.;          % scaling factor of the figure
+k_scaling =1.2;          % scaling factor of the figure
 % (You need to plot a figure which has a width of (8.8 * k_scaling)
 % in MATLAB, so that when you paste it into your paper, the width will be
 % scalled down to 8.8 cm  which can guarantee a preferred clearness.
-k_width_hight = 0.618;      % width:hight ratio of the figure
+k_width_hight = 0.43;      % width:hight ratio of the figure
 
 % width = 8.3 * k_scaling;
 width = 17.6 * k_scaling;
-% hight = width * k_width_hight;
+hight = width * k_width_hight;
 
 %% figure margins
 top = 0.5;  % normalized top margin 0.5
@@ -31,7 +31,7 @@ right = 1;  % normalized right margin 1
 
 %% set default figure configurations
 set(0,'defaultFigureUnits','centimeters');
-% set(0,'defaultFigurePosition',[0 0 width hight]);
+set(0,'defaultFigurePosition',[0 0 width hight]);
 
 set(0,'defaultLineLineWidth',1*k_scaling);
 set(0,'defaultAxesLineWidth',0.25*k_scaling);
@@ -41,16 +41,16 @@ set(0,'defaultAxesYGrid','on');
 set(0,'defaultAxesXGrid','on');
 
 set(0,'defaultAxesFontName','Arial');
-set(0,'defaultAxesFontSize',8*k_scaling);
+set(0,'defaultAxesFontSize',8);
 
 set(0,'defaultTextFontName','Arial');
-set(0,'defaultTextFontSize',8*k_scaling);
+set(0,'defaultTextFontSize',8);
 
 set(0,'defaultLegendFontName','Arial');
-set(0,'defaultLegendFontSize',8*k_scaling);
+set(0,'defaultLegendFontSize',8);
 
 set(0,'defaultAxesUnits','normalized');
-% set(0,'defaultAxesPosition',[left/width bottom/hight (width-left-right)/width  (hight-bottom-top)/hight]);
+set(0,'defaultAxesPosition',[left/width bottom/hight (width-left-right)/width  (hight-bottom-top)/hight]);
 
 % set(0,'defaultAxesColorOrder',[0 0 0]);
 set(0,'defaultAxesTickDir','out');

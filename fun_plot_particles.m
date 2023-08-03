@@ -1,4 +1,4 @@
-function fun_plot_particles(struct_sphere, struct_relative, struct_orient, t, idx_rel)
+function fun_plot_particles(struct_sphere, struct_relative, struct_orient, t, idx_rel, particle_num)
 %画三维粒子分布函数。输入数据，各数据时刻
 
     %% 画球面
@@ -13,6 +13,9 @@ function fun_plot_particles(struct_sphere, struct_relative, struct_orient, t, id
     end
     scatter3(struct_relative.relative_pos_all(idx_rel,:,1), struct_relative.relative_pos_all(idx_rel,:,2), struct_relative.relative_pos_all(idx_rel,:,3), 15, 'MarkerEdgeColor',[0.8500, 0.325, 0.0980], 'MarkerFaceColor',[0.90, 0.325, 0.12]);
     
+%     quiver3(zeros(1,particle_num),zeros(1,particle_num),zeros(1,particle_num), struct_orient.mav_orient_xyz(idx_rel,:,1), struct_orient.mav_orient_xyz(idx_rel,:,2), struct_orient.mav_orient_xyz(idx_rel,:,3), ...
+%     '-','LineWidth',3,'Color','#77AC30','AutoScale','on','AutoScaleFactor',1);
+
     %% 绘图配置
     axis equal;
     xlim([-10, 10]);
@@ -22,6 +25,7 @@ function fun_plot_particles(struct_sphere, struct_relative, struct_orient, t, id
 %     ylabel("y");
 %     zlabel("z");
     ax = gca;
+    ax.GridLineStyle = '-';
     ax.YTick = [-80 -40 0];
     ax.View = [-1.694536890767183e+02,3.107892593122449];
     ax.CameraViewAngle = 3;
