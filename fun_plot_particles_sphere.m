@@ -8,7 +8,7 @@ function fun_plot_particles_sphere(struct_sphere, struct_relative, struct_orient
     %% 画粒子
     scatter3(struct_sphere.sphere_pos_all(t,:,1), struct_sphere.sphere_pos_all(t,:,2), struct_sphere.sphere_pos_all(t,:,3), 150*struct_sphere.weight_sphere(t,:), 'MarkerFaceColor',[0 .75 .75]);
     if norm(struct_sphere.measurement_all(t,:)) > 0.1
-        scatter3(0.8*struct_sphere.measurement_all(t,1), 0.8*struct_sphere.measurement_all(t,2), 0.8*struct_sphere.measurement_all(t,3), 60, 'MarkerEdgeColor','k', 'MarkerFaceColor',[0.8500, 0.10, 0.0980]);
+        scatter3(0.8*struct_sphere.measurement_all(t,1), 0.8*struct_sphere.measurement_all(t,2), 0.8*struct_sphere.measurement_all(t,3), 60, 'MarkerEdgeColor','k', 'MarkerFaceColor',[0.9, 0.078, 0.184]);
     end
 %     quiver3(0,0,0, 0.9*struct_sphere.barycenter_all(t,1),0.9*struct_sphere.barycenter_all(t,2),0.9*struct_sphere.barycenter_all(t,3), ...
 %     '-','LineWidth',3,'Color','#77AC30','AutoScale','on','AutoScaleFactor',1);

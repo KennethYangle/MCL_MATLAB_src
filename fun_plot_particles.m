@@ -2,7 +2,7 @@ function fun_plot_particles(struct_sphere, struct_relative, struct_orient, t, id
 %画三维粒子分布函数。输入数据，各数据时刻
 
     %% 画球面
-    drawsphere(0,0,0,1);
+    drawsphere(0,0,0,1, "face", 10);
     hold on;
     
     %% 画粒子
@@ -11,7 +11,7 @@ function fun_plot_particles(struct_sphere, struct_relative, struct_orient, t, id
     if norm(struct_sphere.measurement_all(t,:)) > 0.1
         scatter3(0.8*struct_sphere.measurement_all(t,1), 0.8*struct_sphere.measurement_all(t,2), 0.8*struct_sphere.measurement_all(t,3), 15, 'MarkerEdgeColor','k', 'MarkerFaceColor',[0.8500, 0.10, 0.0980]);
     end
-    scatter3(struct_relative.relative_pos_all(idx_rel,:,1), struct_relative.relative_pos_all(idx_rel,:,2), struct_relative.relative_pos_all(idx_rel,:,3), 15, 'MarkerEdgeColor',[0.8500, 0.325, 0.0980], 'MarkerFaceColor',[0.90, 0.325, 0.12]);
+    scatter3(struct_relative.relative_pos_all(idx_rel,:,1), struct_relative.relative_pos_all(idx_rel,:,2), struct_relative.relative_pos_all(idx_rel,:,3), 15, 'MarkerEdgeColor',"#f47923", 'MarkerFaceColor',"#ff8d24");
     
 %     quiver3(zeros(1,particle_num),zeros(1,particle_num),zeros(1,particle_num), struct_orient.mav_orient_xyz(idx_rel,:,1), struct_orient.mav_orient_xyz(idx_rel,:,2), struct_orient.mav_orient_xyz(idx_rel,:,3), ...
 %     '-','LineWidth',3,'Color','#77AC30','AutoScale','on','AutoScaleFactor',1);

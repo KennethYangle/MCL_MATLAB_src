@@ -17,7 +17,8 @@ k_scaling =1.2;          % scaling factor of the figure
 % (You need to plot a figure which has a width of (8.8 * k_scaling)
 % in MATLAB, so that when you paste it into your paper, the width will be
 % scalled down to 8.8 cm  which can guarantee a preferred clearness.
-k_width_hight = 0.43;      % width:hight ratio of the figure
+% k_width_hight = 0.43;      % for subplot_process.m
+k_width_hight = 0.52;      % width:hight ratio of the figure
 
 % width = 8.3 * k_scaling;
 width = 17.6 * k_scaling;
