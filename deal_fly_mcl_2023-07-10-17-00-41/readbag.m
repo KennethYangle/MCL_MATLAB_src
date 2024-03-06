@@ -1,13 +1,13 @@
 %% 读入数据
-% % 耗时长，1个小时 谨慎运行此部分
-% clc;clear;
-% bag = rosbag("E:/fly_mcl_2023-07-10-15-42-43.bag");
-% topic_sphere_marker = select(bag,'Time',[bag.StartTime+15 bag.StartTime+40],'Topic','/sphere_marker');
-% msg_sphere_marker = readMessages(topic_sphere_marker);
-% topic_target_marker = select(bag,'Time',[bag.StartTime+15 bag.StartTime+40],'Topic','/target_marker');
-% msg_target_marker = readMessages(topic_target_marker);
-% topic_particles = select(bag,'Time',[bag.StartTime+15 bag.StartTime+40],'Topic','/particles');
-% msg_particles = readMessages(topic_particles);
+% 耗时长，1个小时 谨慎运行此部分
+clc;clear;
+bag = rosbag("E:/fly_mcl_2023-07-10-17-00-41.bag"); % "E:/大文件/闫村实验二次打击-230709/0710-1700MCL-firstattacksuccess/fly_mcl_2023-07-10-17-00-41.bag"
+topic_sphere_marker = select(bag,'Time',[bag.StartTime+105 bag.StartTime+121],'Topic','/sphere_marker');
+msg_sphere_marker = readMessages(topic_sphere_marker);
+topic_target_marker = select(bag,'Time',[bag.StartTime+105 bag.StartTime+121],'Topic','/target_marker');
+msg_target_marker = readMessages(topic_target_marker);
+topic_particles = select(bag,'Time',[bag.StartTime+105 bag.StartTime+121],'Topic','/particles');
+msg_particles = readMessages(topic_particles);
 
 % % 可替换为下面
 % load msg_sphere_marker.mat;

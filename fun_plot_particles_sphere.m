@@ -15,9 +15,9 @@ function fun_plot_particles_sphere(struct_sphere, struct_relative, struct_orient
 
     %% 绘图配置
     axis equal;
-%     xlabel("x");
-%     ylabel("y");
-%     zlabel("z");
+    xlabel("x(m)");    % 画subplot可能碍事，关掉就行
+    ylabel("y(m)");
+    zlabel("z(m)");
     ax = gca;
     ax.GridLineStyle = '-';
     ax.View = [-1.694536890767183e+02,3.107892593122449];

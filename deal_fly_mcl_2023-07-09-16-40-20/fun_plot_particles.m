@@ -19,7 +19,7 @@ function fun_plot_particles(struct_sphere, struct_relative, struct_orient, t, id
     %% 绘图配置
     axis equal;
     xlim([-10, 10]);
-    ylim([-90, 10]);
+    ylim([-90, 50]);
     zlim([-10, 10]);
     xlabel("x(m)");    % 画subplot可能碍事，关掉就行
     ylabel("y(m)");

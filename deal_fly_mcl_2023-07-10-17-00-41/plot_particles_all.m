@@ -1,4 +1,6 @@
 % clc;clear;
+addpath(genpath('..\'));
+
 figure_configuration_IEEE_standard;
 load struct_sphere.mat;
 load struct_relative.mat;
@@ -22,13 +24,17 @@ end
 struct_orient.mav_orient_xyz = mav_orient_xyz;
 
 % 写视频操作
-videoobj = VideoWriter('particles_all-fly_mcl_2023-07-10-15-42-43.avi', 'Uncompressed AVI');
+videoobj = VideoWriter('particles_all-fly_mcl_2023-07-10-17-00-41.avi', 'Uncompressed AVI');
 videoobj.FrameRate = 30;
 open(videoobj)
 
 idx_rel = 1;
 for t = 1:length(struct_sphere.sphere_pos_all)
     disp(t);
+    if idx_rel == s(1)
+        break
+    end
+    
     if struct_relative.t_relative(idx_rel+1,1) < struct_sphere.t_sphere(t,1)
         idx_rel = idx_rel + 1;
     end
@@ -47,3 +53,5 @@ for t = 1:length(struct_sphere.sphere_pos_all)
     writeVideo(videoobj,frame);
 end
 close(videoobj)
+
+rmpath(genpath('..\'));
